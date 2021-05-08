@@ -10,5 +10,10 @@
   <%= @flat.flat_type %>
 </p>
 
+<% if @flat.banner.attached? %>
+  <%= cl_image_tag @flat.banner.key, width: 150, height: 150 %>
+  <img src="" alt="">
+<% end %>
+
 <%= link_to 'Edit', edit_flat_path(@flat) %> |
 <%= link_to 'Back', flats_path %>
